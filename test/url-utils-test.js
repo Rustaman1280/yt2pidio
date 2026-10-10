@@ -15,6 +15,8 @@ describe('getURLVideoID()', () => {
     assert.strictEqual(id, 'RAW_VIDEOID');
     id = getURLVideoID('http://youtube.com/v/RAW_VIDEOID');
     assert.strictEqual(id, 'RAW_VIDEOID');
+    id = getURLVideoID('https://www.youtube.com/live/RAW_VIDEOID?feature=share');
+    assert.strictEqual(id, 'RAW_VIDEOID');
     id = getURLVideoID('http://youtube.com/embed/RAW_VIDEOID');
     assert.strictEqual(id, 'RAW_VIDEOID');
     id = getURLVideoID('http://youtube.com/shorts/RAW_VIDEOID');
